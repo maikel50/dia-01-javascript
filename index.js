@@ -15,7 +15,7 @@ const exercises = [
         id: 3, 
         title: "Ejercicio 3", 
         hint: "Declara dos variables numéricas a y b. Muestra un mensaje si a es mayor que b.", 
-        check: () => typeof a !== 'undefined' && typeof b !== 'undefined' && a > b
+        check: () => typeof a !== 'undefined' && typeof b !== 'undefined' && (a > b || a < b)
     },
     { 
         id: 4, 
