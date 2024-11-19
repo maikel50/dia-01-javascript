@@ -1,7 +1,9 @@
-// Ejercicio 3: Declara dos variables `a` y `b` con valores numéricos y compara si `a` es mayor que `b`.
+// Ejercicio 3: Función Es Par
 // Instrucciones:
-// 1. Declara dos variables llamadas `a` y `b`, asignándoles números (por ejemplo, `a = 5` y `b = 3`).
-// 2. Usa un `if` para mostrar un mensaje con alert() si `a` es mayor que `b`.
+// 1. Crea una función llamada `esPar` que tome un parámetro `numero`.
+// 2. La función debe retornar true si el número es par, y false si es impar.
+// 3. Usa el operador módulo (%) para verificar si es par.
+// 4. Por ejemplo: esPar(2) debe retornar true, esPar(3) debe retornar false
 
 // Escribe tu código aquí debajo:
 

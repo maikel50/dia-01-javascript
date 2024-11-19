@@ -1,9 +1,12 @@
-// Ejercicio 10: Calcula el doble de un número y muestra un mensaje si es mayor que 10.
+// Ejercicio 10: Función Tamaño Palabra
 // Instrucciones:
-// 1. Declara una variable llamada `numero` y asígnale un valor numérico.
-// 2. Declara otra variable `doble` y asígnale el resultado de multiplicar `numero` por 2.
-// 3. Usa un `if` para comprobar si el valor de `doble` es mayor que 10. Si es así, muestra un mensaje con alert() que diga "El doble es mayor que 10".
-// 4. No necesitas hacer nada adicional; el sistema validará si `doble` fue calculado y comparado correctamente.
+// 1. Crea una función llamada `tamañoPalabra` que tome un texto como parámetro
+// 2. La función debe retornar:
+//    - "Corta" si el texto tiene menos de 5 caracteres
+//    - "Media" si el texto tiene entre 5 y 10 caracteres
+//    - "Larga" si el texto tiene más de 10 caracteres
+// 3. Usa la propiedad .length y estructuras if-else
+// 4. Por ejemplo: tamañoPalabra("hola") debe retornar "Corta"
 
 // Escribe tu código aquí debajo:
 

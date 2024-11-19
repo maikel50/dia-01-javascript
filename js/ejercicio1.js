@@ -1,6 +1,8 @@
-// Ejercicio 1: Muestra un mensaje con alert que diga "¡Hola, mundo!"
+// Ejercicio 1: Función Saludar
 // Instrucciones:
-// 1. Crea una variable llamada `holaMundo` y asígnale el valor "¡Hola, mundo!".
-// 2. Usa `alert(holaMundo);` para mostrar el mensaje en pantalla.
+// 1. Crea una función llamada `saludar` que tome un parámetro `nombre`.
+// 2. La función debe retornar (usando return) el texto "¡Hola, " seguido del nombre y "!".
+// 3. Por ejemplo: saludar("Ana") debe retornar "¡Hola, Ana!"
+// 4. No uses alert() en este ejercicio, solo return.
 
 // Escribe tu código aquí debajo:

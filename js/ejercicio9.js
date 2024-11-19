@@ -1,10 +1,12 @@
-// Ejercicio 9: Pide al usuario que ingrese una palabra y verifica si es "JavaScript".
+// Ejercicio 9: Función Saludo por Idioma
 // Instrucciones:
-// 1. Usa `prompt()` para pedir al usuario que ingrese una palabra y guarda el resultado en una variable llamada `palabra`.
-// 2. Usa un `if` para comprobar si el valor de `palabra` es exactamente igual a "JavaScript".
-// 3. Si la palabra es "JavaScript", muestra un mensaje con alert() que diga "¡Correcto!".
-// 4. Si la palabra no es "JavaScript", muestra un mensaje que diga "Intenta de nuevo".
-// 5. No necesitas hacer nada adicional; el sistema validará si `palabra` fue comparada correctamente y el mensaje mostrado es adecuado.
+// 1. Crea una función llamada `saludoIdioma` que tome un código de idioma
+// 2. Usa switch para retornar el saludo según el código:
+//    - "es" debe retornar "Hola"
+//    - "en" debe retornar "Hello"
+//    - "fr" debe retornar "Bonjour"
+//    - Para cualquier otro código, retorna "Idioma no soportado"
+// 3. Por ejemplo: saludoIdioma("en") debe retornar "Hello"
 
 // Escribe tu código aquí debajo:
 
