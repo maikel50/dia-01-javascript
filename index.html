@@ -5,7 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Retos de JavaScript</title>
-  <link rel="stylesheet" href="./index.css">
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Scripts de ejercicios -->
   <script src="js/ejercicio1.js"></script>
   <script src="js/ejercicio2.js"></script>
   <script src="js/ejercicio3.js"></script>
@@ -17,13 +24,35 @@
   <script src="js/ejercicio9.js"></script>
   <script src="js/ejercicio10.js"></script>
 
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f3f4f6;
+    }
+    .exercise-card {
+      transition: transform 0.2s;
+    }
+    .exercise-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body>
-  <h1>Retos de JavaScript</h1>
-  <ul id="exercise-list">
-    <!-- Aquí se generarán los elementos de cada ejercicio con JavaScript -->
-  </ul>
+<body class="min-h-screen py-8 px-4">
+  <div class="max-w-3xl mx-auto">
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">
+        <i class="fas fa-code text-indigo-600"></i> 
+        Retos de JavaScript
+      </h1>
+      <p class="text-gray-600">Practica tus habilidades resolviendo estos ejercicios</p>
+    </header>
+
+    <div class="grid md:grid-cols-2 gap-6" id="exercise-list">
+      <!-- Los ejercicios se generarán aquí -->
+    </div>
+  </div>
   <script src="./index.js"></script>
 </body>
 

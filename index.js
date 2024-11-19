@@ -151,42 +151,62 @@ const exercises = [
 function initializeExercises() {
     const list = document.getElementById("exercise-list");
     exercises.forEach(exercise => {
-        const item = document.createElement("li");
-        item.className = "exercise-item";
+        const card = document.createElement("div");
+        card.className = "exercise-card bg-white rounded-lg shadow-md p-6 flex flex-col";
         
-        // Nombre del ejercicio
-        const title = document.createElement("span");
+        // Cabecera del ejercicio
+        const header = document.createElement("div");
+        header.className = "flex items-center justify-between mb-4";
+        
+        const title = document.createElement("h3");
+        title.className = "text-lg font-semibold text-gray-800";
         title.innerText = exercise.title;
         
-        // Estado de validación
         const checkmark = document.createElement("span");
-        checkmark.className = "checkmark";
-        checkmark.innerText = "❌"; // Cambia a ✅ si está correcto
+        checkmark.className = "text-2xl";
+        checkmark.innerHTML = "❌"; // Cambiará a ✅
         
-        // Botón para pista
+        header.appendChild(title);
+        header.appendChild(checkmark);
+        
+        // Botón de pista
         const hintButton = document.createElement("button");
-        hintButton.innerText = "Mostrar pista";
-        hintButton.onclick = () => alert(exercise.hint);
+        hintButton.className = "mt-auto inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors";
+        hintButton.innerHTML = `
+            <i class="fas fa-lightbulb mr-2"></i>
+            Ver pista
+        `;
+        hintButton.onclick = () => {
+            Swal.fire({
+                title: 'Pista',
+                text: exercise.hint,
+                icon: 'info',
+                confirmButtonColor: '#4f46e5'
+            });
+        };
         
-        item.appendChild(title);
-        item.appendChild(checkmark);
-        item.appendChild(hintButton);
-        list.appendChild(item);
+        // Ensamblaje del card
+        card.appendChild(header);
+        card.appendChild(hintButton);
+        list.appendChild(card);
         
-        // Validación automática del ejercicio
+        // Validación automática
         validateExercise(exercise, checkmark);
     });
 }
 
-// Función para validar ejercicios
+// Función de validación actualizada
 function validateExercise(exercise, checkmark) {
-    try {
-        if (exercise.check()) {
-            checkmark.innerText = "✅";
+    setInterval(() => {
+        try {
+            const isValid = exercise.check();
+            checkmark.innerHTML = isValid ? 
+                '<i class="fas fa-check-circle text-green-500"></i>' : 
+                '<i class="fas fa-times-circle text-red-500"></i>';
+        } catch (e) {
+            checkmark.innerHTML = '<i class="fas fa-times-circle text-red-500"></i>';
         }
-    } catch (e) {
-        console.error(`Error al validar el ejercicio ${exercise.id}: ${e.message}`);
-    }
+    }, 1000);
 }
 
 // Inicialización de ejercicios en la página
