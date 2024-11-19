@@ -48,6 +48,11 @@ const exercises = [
             try {
                 return typeof diaDeLaSemana === 'function' && 
                        diaDeLaSemana(1) === 'lunes' && 
+                       diaDeLaSemana(2) === 'martes' && 
+                       diaDeLaSemana(3) === 'miércoles' && 
+                       diaDeLaSemana(4) === 'jueves' && 
+                       diaDeLaSemana(5) === 'viernes' && 
+                       diaDeLaSemana(6) === 'sábado' && 
                        diaDeLaSemana(7) === 'domingo';
             } catch(e) {
                 return false;
