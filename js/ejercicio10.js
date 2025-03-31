@@ -6,4 +6,8 @@
 // 4. No necesitas hacer nada adicional; el sistema validará si `doble` fue calculado y comparado correctamente.
 
 // Escribe tu código aquí debajo:
-
+var numero = 9
+var doble = numero  * 2
+if(doble > 10){
+    alert("El doble es mayor que 10")
+}

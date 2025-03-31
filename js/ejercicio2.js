@@ -5,3 +5,4 @@
 
 // Escribe tu código aquí debajo:
 
+var nombre ="Michael"
