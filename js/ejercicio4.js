@@ -9,3 +9,32 @@
 
 // Escribe tu código aquí debajo:
 
+function diaDeLaSemana(numero){
+    if(numero >=1 && numero <=7){
+        switch(numero){
+            case 1:
+                return "lunes"
+            break;
+            case 2:
+                return "martes"
+            break;
+            case 3:
+                return "miércoles"
+            break;
+            case 4:
+                return"jueves"
+            break;
+            case 5:
+                return"viernes"
+                break;
+            case 6:
+                return "sábado"
+                break;
+            case 7:
+                return"domingo"
+                break;
+            }
+    }else  {
+        return "día inválido"
+    }
+}

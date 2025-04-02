@@ -10,4 +10,40 @@
 // 3. Por ejemplo: notaTexto(7) debe retornar "Notable"
 
 // Escribe tu código aquí debajo:
-
+function notaTexto(numero){
+    switch(numero){
+        case 10:
+            return "Sobresaliente"
+            break;
+        case 9:
+            return "Excelente"
+            break;
+        case 8:
+            return "Notable"
+            break;
+        case 7:
+            return "Notable"
+            break;
+        case 6 :
+            return "Aprobado"
+            break;
+        case 5:
+            return "Aprobado"
+            break;
+        case 4:
+            return "Suspendido"
+            break;
+        case 3:
+            return "Suspendido"
+            break;
+        case 2:
+            return "Suspendido"
+            break;
+        case 1:
+            return "Suspendido"
+            break;
+        case 0:
+            return "Suspendido"
+            break;
+        }
+}

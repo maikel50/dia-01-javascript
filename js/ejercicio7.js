@@ -8,4 +8,19 @@
 // 3. Por ejemplo: operacion(4, 2, '+') debe retornar 6
 
 // Escribe tu código aquí debajo:
-
+function operacion(num1, num2, operador){
+    switch(operador){
+        case "+":
+            return num1 + num2;
+        break;
+        case "-":
+            return num1 - num2;
+        break;
+        case "*":
+            return num1 * num2;
+            break;
+        case "/":
+            return num1 / num2;
+            break;
+    }
+}

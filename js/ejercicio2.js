@@ -6,4 +6,6 @@
 // 4. Usa el operador de multiplicación (*) y return.
 
 // Escribe tu código aquí debajo:
-
+function cuadrado(numero){
+    return numero*numero
+}

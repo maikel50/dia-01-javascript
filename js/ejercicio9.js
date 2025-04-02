@@ -10,3 +10,14 @@
 
 // Escribe tu código aquí debajo:
 
+function saludoIdioma(idioma){
+    if(idioma === "es"){
+        return "Hola"
+    }else if(idioma === "en"){
+        return "Hello"
+    }else if(idioma === "fr"){
+        return "Bonjour"
+    }else{
+        return "Idioma no soportado"
+    }
+}
