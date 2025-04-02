@@ -1,5 +1,11 @@
 class AIAssistant {
     constructor() {
+        if (!localStorage.getItem('openai_api_key')) {
+            apikey = prompt('Indicame la api key que te dio yunior');
+            if (apikey) {
+                localStorage.setItem('openai_api_key', apikey);
+            }
+        }
         this.API_KEY = localStorage.getItem('openai_api_key');
         this.ENDPOINT = 'https://api.openai.com/v1/chat/completions';
         this.context = this.initializeContext();
@@ -52,7 +58,7 @@ class AIAssistant {
         const helpButton = document.createElement('button');
         helpButton.innerHTML = '<i class="fas fa-robot"></i> Asistente IA';
         helpButton.className = 'fixed bottom-4 right-4 bg-indigo-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-indigo-700 transition-colors flex items-center gap-2 text-lg';
-        
+
         // Crear modal del chat con mejor diseño
         const chatModal = document.createElement('div');
         chatModal.className = 'fixed bottom-20 right-4 w-[400px] h-[700px] bg-white rounded-lg shadow-2xl hidden flex flex-col border border-gray-200'; // Aumentar ancho y alto
@@ -150,7 +156,7 @@ class AIAssistant {
         input.value = '';
 
         const messagesDiv = document.getElementById('chat-messages');
-        
+
         // Agregar mensaje del usuario
         this.addMessage(messagesDiv, question, 'user');
 
@@ -187,22 +193,22 @@ class AIAssistant {
     addMessage(container, message, type) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `chat-message ${type}`;
-        
+
         const bubble = document.createElement('div');
         bubble.className = 'message-content';
-        
+
         // Usar marked para renderizar Markdown
         bubble.innerHTML = marked.parse(message, {
             breaks: true,
             gfm: true,
-            highlight: function(code, lang) {
+            highlight: function (code, lang) {
                 if (lang && hljs.getLanguage(lang)) {
                     return hljs.highlight(code, { language: lang }).value;
                 }
                 return code;
             }
         });
-        
+
         messageDiv.appendChild(bubble);
         container.appendChild(messageDiv);
         container.scrollTop = container.scrollHeight;
@@ -219,13 +225,13 @@ class AIAssistant {
         Object.entries(this.context.exercises).forEach(([file, code]) => {
             // Análisis básico de errores
             const errors = [];
-            
+
             if (commonErrors.missingBraces.test(code)) {
                 errors.push(`Posible falta de llaves {} en ${file}`);
             }
-            
+
             // Más análisis según necesidades...
-            
+
             if (errors.length > 0) {
                 console.warn(`Errores detectados en ${file}:`, errors);
                 // Podríamos usar esta información para dar consejos proactivos
